@@ -1,0 +1,105 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+:root {
+    --btn-accent: coral;
+    --btn-dark: #131313;
+
+}
+
+.btn {
+    padding: 0.9rem 1rem;
+    margin: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    transition: all 0.5s ease -0.1s;
+    box-shadow: 0px 0px 5px #131313;
+   
+
+}
+
+.btn-accent {
+    background-color: var(--btn-accent);
+    color: #ffff;
+}
+
+.btn-click {
+    background-color: teal;
+}
+
+.btn-dark {
+    background: var(--btn-dark);
+    color: var(--btn-accent);
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: -4px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 5px;
+    border: 5px solid white
+}
+
+
+
+.switch {
+    font-size: 0.98rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.switch input {
+    opacity: 1;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    background: #fff;
+    transition: 0.4s;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.9em;
+    width: 1.9em;
+    border-radius: 16px;
+    right: 1.2px;
+    top: 0;
+    background-color: white;
+    box-shadow: 0 2px 5px #999999;
+    transition: 0.4s;
+}
+
+input:checked+.slider {
+    background-color: #5fdd54;
+    border: 1px solid transparent;
+}
+
+input:checked+.slider:before {
+    transform: translateY(1.5em);
+}
